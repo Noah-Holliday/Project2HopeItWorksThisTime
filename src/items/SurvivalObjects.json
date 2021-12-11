@@ -1,0 +1,25 @@
+{
+    "listOfObjectsTypes":[
+        {"ObjectType":"Camping Materials", 
+            "Items":[ 
+                {"name":"Bedroll", "description": "Cozy up in and watch the stars."},
+                {"name":"Campfire", "description": "You'll need some light when it gets dark."},
+                {"name":"Tent", "description": "Finally a place to get away from the elements!"},
+                {"name":"Structure", "description": "Quite an upgrade from the tent."}
+            ]
+        },
+        {"ObjectType":"Surivial Items", 
+            "Items":[ 
+                {"name":"Hoe", "description": "Grow some food like the olden days."},
+                {"name":"Axe", "description": "Go get some wood for the fire."},
+                {"name":"Pickaxe", "description": "Is this minecraft? Why on earth would you need this?"}
+            ]
+        },
+        {"ObjectType":"Grass", 
+            "Items":[ 
+                {"name":"Grass", "description": "Its just grass bro."},
+                {"name":"Large Grass", "description": "Some slightly larger Grass"}
+            ]
+        }
+    ]
+}
