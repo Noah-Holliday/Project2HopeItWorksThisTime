@@ -12,8 +12,10 @@ import Structure from './StructureRoof'
 import { Text } from 'troika-three-text'
 import { extend } from "react-three-fiber";
 
+//have to extent the Text to make it an identifiable THREE object
 extend({ Text });
 
+//function that renders text into the scene using the 'troika-three-text' library
 function CreateItemDescription(textToDisplay) {
     return (    
         <text position = {[0, 3, 0]} outlineColor="green" textAlign = "justify" maxWidth = {300} lineHeight = {1} letterSpacing = {0} letterSpacing = {0} anchorX="center" anchorY="top" text = {textToDisplay} font = "Philosopher" fontSize = {.7}> 
@@ -21,6 +23,8 @@ function CreateItemDescription(textToDisplay) {
         </text>);
 }
 
+//really ugly and hacky way to apply the data to the individual models
+//originally wanted to do this through the "lazy" library in react, however, since each import is an actually elemenet that we are loading that route was not realistic
 export default function Item(props) {
     const ItemToRender = SurvivalObjects.listOfObjectsTypes[props.currentRenderType].Items.map(items => {
         console.log(items.name)
@@ -49,6 +53,7 @@ export default function Item(props) {
 
     console.log(ItemToRender)
 
+    //then just render the item based off of the inserted current position and type and also create the text for the item that will be getting shown
     return (
         <group>
             {ItemToRender[props.currentRenderPosition]}

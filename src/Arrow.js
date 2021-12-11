@@ -6,6 +6,7 @@ import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 import SurvivalObjects from './items/SurvivalObjects.json'
 
+//create the render for the arrow just like any other customer model
 export default function Arrow(props) {
   const group = useRef()
   const { nodes, materials } = useGLTF('/Models/Arrow.glb')
@@ -15,6 +16,7 @@ export default function Arrow(props) {
         console.log(props.arrowDirection)
         console.log(props.currentRenderPosition)
         console.log(props.currentRenderType)
+        //ugly conditional logic to pan through myy survival object JSON file and change what item we are currently rendering. With the inclusion of checks to ensure we are not going outside of arrays
         if(props.arrowDirection === "negative-type" && props.currentRenderType > 0) {
           props.setCurrentRenderPosition(0)
           props.setCurrentRender(props.currentRenderType - 1)

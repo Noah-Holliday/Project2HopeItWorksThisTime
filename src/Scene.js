@@ -7,10 +7,14 @@ import Item from './Item.js'
 
 
 export default function Scene() {
+
+    //a variable to track the render object type that we are in 
     const [currentRenderType, setCurrentRenderType] = useState(0);
+        //a variable to track the render object position within the type that we are in 
     const [currentRenderPosition, setCurrentRenderPosition] = useState(0);
 
     return (
+        //construct a canvas
         <Canvas style={{ background: "#171717" }}>
             <OrbitControls />
             <Stars />
@@ -25,5 +29,7 @@ export default function Scene() {
                 <Floor />
             </Suspense>
         </Canvas>
+        //The arrows have arrowDirection to allow the arrow component to know the logic that it should apply when considering its on click. It also imports in the current render type and position. Along with the ability to modified them
+        //The item component needs to have the current render type and position sent to it, for it to know what items to render.
     )
 }
