@@ -2,7 +2,7 @@
   "name": "project2",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://noah-holliday.github.io/Project2HopeItWorksThisTime/",
+  "homepage": "https://noah-holliday.github.io/",
   "dependencies": {
     "@material-ui/core": "^4.12.3",
     "@material-ui/utils": "^4.11.2",

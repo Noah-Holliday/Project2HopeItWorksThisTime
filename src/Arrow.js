@@ -9,7 +9,7 @@ import SurvivalObjects from './items/SurvivalObjects.json'
 //create the render for the arrow just like any other customer model
 export default function Arrow(props) {
   const group = useRef()
-  const { nodes, materials } = useGLTF('Project2HopeItWorksThisTime/Models/Arrow.glb')
+  const { nodes, materials } = useGLTF('/Models/Arrow.glb')
   return (
     <group ref={group} dispose={null}>
       <mesh {...props} onClick={(e) => {

@@ -7,7 +7,7 @@ import { useGLTF } from '@react-three/drei'
 
 export default function Model({ ...props }) {
   const group = useRef()
-  const { nodes, materials } = useGLTF('Project2HopeItWorksThisTime/Models/bedroll.glb')
+  const { nodes, materials } = useGLTF('/Models/bedroll.glb')
   return (
     <group position={[0,-2.5,0]} ref={group} {...props} dispose={null}>
       <mesh geometry={nodes.Mesh_bedroll.geometry} material={materials.foliage} />
